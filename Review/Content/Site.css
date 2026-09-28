@@ -1,0 +1,62 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Hide the actual radio button circle */
+.rating-radio-hidden {
+    display: none;
+}
+
+/* Layout the labels in a row with spacing */
+.rating-pill-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Space between the buttons */
+    flex-wrap: wrap; /* Allows them to wrap on smaller screens */
+}
+
+/* Style the labels to look like modern buttons */
+.rating-pill {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 6px; /* Smooth rounded corners */
+    background-color: #fff;
+    color: #495057;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    margin-bottom: 0; /* Override default label margin */
+}
+
+    /* Hover effect */
+    .rating-pill:hover {
+        background-color: #f8f9fa;
+        border-color: #adb5bd;
+    }
+
+/* When a radio button is checked, highlight its label */
+.rating-radio-hidden:checked + .rating-pill {
+    background-color: #0d6efd; /* This is a standard Bootstrap Blue - change to match your theme! */
+    color: #ffffff;
+    border-color: #0d6efd;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3); /* Subtle glow */
+}
